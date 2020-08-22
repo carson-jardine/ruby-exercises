@@ -7,7 +7,7 @@ require_relative 'catalogue'
 class CatalogueTest < Minitest::Test
   def test_without_products
     catalogue = Catalogue.new
-    assert_equal nil, catalogue.cheapest
+    assert_nil catalogue.cheapest
   end
 
   def test_cheapest_of_one
@@ -18,7 +18,7 @@ class CatalogueTest < Minitest::Test
   end
 
   def test_cheapest_product
-    skip
+    # skip
     catalogue = Catalogue.new
     catalogue << Product.new("cupcake", 3)
     catalogue << Product.new("shirt", 23)

@@ -17,21 +17,23 @@ class ReducePatternTest < Minitest::Test
     numbers = [28, 12, 38, 1, 91]
     difference = 0
     numbers.each do |number|
-      # Your code goes here
+      difference = difference - number
     end
     assert_equal -170, difference
   end
 
   def test_multiply_list_of_numbers
-    skip
+    # skip
     numbers = [2, 3, 5, 7]
     product = 1
-    # Your code goes here
+    numbers.each do |number|
+      product = product * number
+    end
     assert_equal 210, product
   end
 
   def test_capitalize_keywords_in_phrase_one_fish_two_fish_red_fish_blue_fish
-    skip
+    # skip
     keywords = ["fish", "blue"]
     phrase = 'one fish two fish red fish blue fish'
     # Your code goes here

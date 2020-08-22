@@ -12,4 +12,5 @@ class Cupcakes
   def <<(cupcake)
     @cupcakes << cupcake
   end
+
 end

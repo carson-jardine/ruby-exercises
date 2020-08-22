@@ -11,7 +11,7 @@ class AppointmentsTest < Minitest::Test
   end
 
   def test_earliest_of_one
-    skip
+    # skip
     slots = Appointments.new
     t1 = Time.new(2014, 3, 14, 4, 30)
     slots.at t1

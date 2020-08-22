@@ -11,9 +11,9 @@ class SantaTest < Minitest::Test
   end
 
   def test_if_santa_eats_too_many_cookies_he_does_not_fit_down_the_chimney
-    skip
+    # skip
     santa = Santa.new
-    santa.eats_cookies 
+    santa.eats_cookies
     assert santa.fits?, "He still fits"
 
     santa.eats_cookies

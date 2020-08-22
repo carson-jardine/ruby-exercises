@@ -10,7 +10,7 @@ class TeenagerTest < Minitest::Test
   end
 
   def test_teenager_has_low_tolerance
-    skip
+    # skip
     teenager = Teenager.new
     teenager.consume_an_alcoholic_beverage
     assert teenager.drunk?, "Teenager got drunk."

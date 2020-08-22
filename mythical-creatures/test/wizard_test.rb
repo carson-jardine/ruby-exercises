@@ -10,55 +10,66 @@ class WizardTest < Minitest::Test
   end
 
   def test_can_have_different_name
-    skip
+    # skip
     wizard = Wizard.new("Alex")
     assert_equal "Alex", wizard.name
   end
 
   def test_is_bearded_by_default
-    skip
+    # skip
     wizard = Wizard.new("Ben")
     assert wizard.bearded?
   end
 
   def test_is_not_always_bearded
-    skip
+    # skip
     wizard = Wizard.new("Valerie", bearded: false)
     refute wizard.bearded?
   end
 
   def test_has_root_powers
-    skip
+    # skip
     wizard = Wizard.new("Sarah", bearded: false)
     assert_equal "sudo chown ~/bin", wizard.incantation("chown ~/bin")
   end
 
   def test_has_lots_of_root_powers
-    skip
+    # skip
     wizard = Wizard.new("Rob", bearded: false)
     assert_equal "sudo rm -rf /home/mirandax", wizard.incantation("rm -rf /home/mirandax")
   end
 
   def test_starts_rested
-    skip
+    # skip
     # create wizard
+    wizard = Wizard.new("Rob", bearded: false)
+    assert wizard.rested?
     # .rested? returns true
   end
 
   def test_can_cast_spells
-    skip
+    # skip
     # create wizard
+    wizard = Wizard.new("Rob", bearded: false)
+    assert_equal "MAGIC MISSLE!", wizard.cast
     # .cast returns "MAGIC MISSILE!"
   end
 
   def test_gets_tired_after_casting_three_spells
-    skip
+    # skip
     # create wizard
+    wizard = Wizard.new("Rob", bearded: false)
+
     # casts spell twice
+    wizard.cast
+    wizard.cast
+    assert wizard.rested?
     # check wizard is rested
+    # require 'pry'; binding.pry
+    wizard.cast
     # casts spell
+    refute wizard.rested?
     # check wizard is not rested
   end
 
 end
-

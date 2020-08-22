@@ -10,7 +10,7 @@ class PersonTest < Minitest::Test
   end
 
   def test_a_person_gets_older
-    skip
+    # skip
     person = Person.new
     person.happy_birthday
     assert_equal 1, person.age

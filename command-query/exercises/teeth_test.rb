@@ -10,7 +10,7 @@ class TeethTest < Minitest::Test
   end
 
   def test_teeth_are_clean_after_brushing_them
-    skip
+    # skip
     teeth = Teeth.new
     teeth.brush
     assert teeth.clean?, "The teeth should now be clean."

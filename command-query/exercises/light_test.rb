@@ -10,7 +10,7 @@ class LightTest < Minitest::Test
   end
 
   def test_turn_light_on
-    skip
+    # skip
     light = Light.new
     light.turn_on
     assert light.on?

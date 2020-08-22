@@ -10,7 +10,7 @@ class DropsTest < Minitest::Test
   end
 
   def test_drip
-    skip
+    # skip
     drops = Drops.new
     drops.drip
     assert_equal 1, drops.count

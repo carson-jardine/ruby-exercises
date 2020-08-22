@@ -15,16 +15,18 @@ class ReduceTest < Minitest::Test
   def test_subtract_list_of_numbers
     numbers = [28, 12, 38, 1, 91]
     result = numbers.reduce(0) do |difference, number|
-      # Your code goes here
+      difference - number
     end
     assert_equal -170, result
   end
 
   def test_multiply_list_of_numbers
-    skip
+    # skip
     numbers = [2, 3, 5, 7]
-    # initial value is 1
-    # Your code goes here
+    result = numbers.reduce(1) do |product, number|
+      product * number
+    end
+
     assert_equal 210, result
   end
 
